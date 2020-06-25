@@ -1,0 +1,187 @@
+html, body {
+  /*  max-width: 100%;
+    overflow-x: hidden;
+    z-index: 1;*/
+    max-height: 100%;
+    max-width: 100%;
+      overflow: hidden;
+      background: black;
+}
+body {
+  /* background: url("/assets/passengers_hd.jpg");
+ -webkit-background-size: cover;
+ -moz-background-size: cover;
+ -o-background-size: cover;
+ background-size: cover;*/
+ position: relative;
+  min-height: 100%;
+  min-height: 100vh;
+
+}
+nav {
+  position: absolute !important;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 5;
+}
+#overlay { /* taken from https://www.w3schools.com/howto/howto_css_overlay.asp*/
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 105%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0);
+  z-index: 6; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+.plane {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:15vw;
+}
+
+audio {
+  width:100%;
+}
+
+.contentHolder {
+  position: absolute;
+  top:0;
+  margin: 0;
+  width:100vw;
+}
+
+.visuals {
+  padding:20px;
+  overflow:auto;
+}
+
+.visuals > img {
+  position:relative;
+  height: 53.3vh;
+  width: 80vh;
+}
+.bigBgHolder {
+  position:fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw; /* Full width (cover the whole page) */
+  max-height: 100%; /* Full height (cover the whole page) */
+  z-index: 2;
+}
+.mainBg {
+  width: 100vw; /* Full width (cover the whole page) */
+  object-fit: cover;
+}
+.v-center {
+   display: flex;
+   align-items: center;
+}
+.playerWrapper {
+  z-index:3;
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.playerHolder {
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+
+.playPauseButton {
+  max-width: 50px;
+}
+
+.playPauseButton:hover {
+  cursor: pointer;
+}
+
+.playPauseButtonHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mask1 { /* 155 x 737 dimensions of the image*/
+  z-index: 4;
+  position:absolute;
+  top: -800px;
+  left:0px;
+  pointer-events: none;
+}
+
+.mask2 { /* 155 x 737 dimensions of the image*/
+  z-index: 4;
+  position:absolute;
+  top: -800px;
+  right:0px;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+  html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      max-height: auto;
+      overflow-y:auto;
+  }
+  .container {
+    width:100vw;
+  }
+  .mainBg {
+    margin-top:100px;
+  }
+  .visuals {
+    margin-top:15px;
+    padding: 5px;
+    overflow:auto;
+  }
+
+  .visuals > img {
+    position:relative;
+    height: 53.3vw;
+    width: 80vw;
+  }
+
+  .playerWrapper {
+    z-index:3;
+    position: absolute;
+    bottom:10%;
+    left:0;
+    right:0;
+  }
+
+  .playerHolder {
+    padding:5px;
+    text-align: center !important;
+  }
+
+  .playPauseButtonHolder {
+    text-align: center !important;
+  }
+}
+
+.navbar-brand, .nav-link {
+  font-family: 'Contrail One', cursive;
+}
+
+.navbar-brand {
+  text-align: center;
+  font-size: 30px;
+}
+
+.navbar-brand small {
+  text-align: center;
+  display:block;
+  font-size:16px;
+}
