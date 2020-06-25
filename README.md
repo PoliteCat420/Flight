@@ -1,7 +1,6 @@
-# sound-journey
+# Documentation
 
-Project Name:
-Sully 2.0
+CommLab Assignment-3 (Sound Journey)
 
 
 Project Description:
